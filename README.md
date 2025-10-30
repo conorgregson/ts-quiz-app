@@ -6,7 +6,7 @@ A mini quiz app built with **TypeScript** to practice generics, discriminated un
 
 ## Live Demo
 
-**▶ Try it now:** Try it now: https://conorgregson.github.io/ts-expense-tracker
+**▶ Try it now:** Try it now: https://conorgregson.github.io/ts-quiz-app
 
 > Data is saved locally in your browser via `localStorage`
 
@@ -112,8 +112,11 @@ Overlay with “⏸ Paused” message, dimmed question area, and resume controls
 Shows final score, best streaks, and a “Review Missed” list:
 
 **Question**: Which keyword defines a constant?
+
 **Your answer**: var
+
 **Correct answer**: const
+
 **Explanation**: The const keyword prevents reassignment.
 
 ---
@@ -149,7 +152,7 @@ tsc --watch
 
 3. **Start a local server**
 
-Open `index.html` in your browser or launch with Live Server in VS Code.
+- Open `index.html` in your browser or launch with Live Server in VS Code.
 
 4. **Play the Quiz!**
 
@@ -160,22 +163,22 @@ Open `index.html` in your browser or launch with Live Server in VS Code.
 ### Quiz Running
 
 Shows a question, options, timer, and score area.
-![Quiz Running](images/quiz-running.png)
+![Quiz Running](./images/quiz-running.png)
 
 ### Paused State
 
 Shows a question, options, timer, and score area.
-![Paused State](images/quiz-paused.png)
+![Paused State](./images/quiz-paused.png)
 
 ### Review Summary
 
 Shows a question, options, timer, and score area.
-![Review Summary](images/quiz-summary.png)
+![Review Summary](./images/quiz-summary.png)
 
 ### Clean UI Mode
 
 Shows a question, options, timer, and score area.
-![Clean UI Mode](images/quiz-clean-ui.png)
+![Clean UI Mode](./images/quiz-clean-ui.png)
 
 ---
 
@@ -183,7 +186,7 @@ Shows a question, options, timer, and score area.
 
 This mini-project helped me practice:
 
-- Practice **TypeScript** generics and discriminated unions
+- **TypeScript** generics and discriminated unions
 - Work with browser **DOM APIs** using strict types
 - Manage state cleanly via a lean orchestrator (`main.ts`)
 - Add polish through **UX features** like sound, pause overlay, and persistent scoring

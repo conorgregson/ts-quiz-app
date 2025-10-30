@@ -1,22 +1,25 @@
-# Ensure consistent line endings
+# Normalize text files (line endings) safely
 * text=auto
 
-# Treat these as text files
-*.ts text
-*.js text
+# Common text types
+*.ts   text
+*.tsx  text
+*.js   text
+*.mjs  text
+*.cjs  text
 *.html text
-*.css text
+*.css  text
 *.json text
-*.md text
-*.yml text
+*.md   text
+*.yml  text
 *.yaml text
 
-# Treat images and binaries as binary (no diff)
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
-*.svg binary
+# Images/binaries must NOT be treated as text
+*.png  binary -text
+*.jpg  binary -text
+*.jpeg binary -text
+*.gif  binary -text
+*.webp binary -text
 
-# Default to UTF-8 encoding
-* text working-tree-encoding=UTF-8
+# SVG is text (diffable)
+*.svg  text
