@@ -1,0 +1,27 @@
+# Build output
+/build/js/
+/dist/
+/out/
+/*.log
+
+# Node modules (if you ever add npm packages)
+node_modules/
+
+# TypeScript cache / temporary files
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+
+# Local preview artifacts
+*.local
+*.tmp
+
+# Environment / system files
+.env

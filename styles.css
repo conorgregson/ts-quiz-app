@@ -1,0 +1,152 @@
+button {
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 0 2px;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+button:hover {
+  transform: translateY(-1px);
+}
+button:focus {
+  outline: 3px solid rgba(59, 130, 246, 0.6);
+  outline-offset: 2px;
+}
+
+.controls button {
+  color: #ffffff;
+}
+
+#pause-resume-btn {
+  margin-left: 7px;
+}
+#pause-resume-btn[data-mode="pause"] {
+  background: #3b82f6;
+}
+#pause-resume-btn[data-mode="pause"]:hover {
+  background: #2563eb;
+}
+
+#pause-resume-btn[data-mode="resume"] {
+  background: #10b981;
+}
+#pause-resume-btn[data-mode="resume"]:hover {
+  background: #059669;
+}
+
+#reset-run-btn,
+#summary-restart-btn {
+  background: #f59e0b;
+  color: #ffffff;
+}
+#reset-run-btn:hover,
+#summary-restart-btn:hover {
+  background: #d97706;
+}
+#reset-run-btn:focus,
+#summary-restart-btn:focus {
+  outline: 3px solid rgba(245, 158, 11, 0.4);
+}
+
+#reset-all-btn {
+  background: #ef4444;
+  margin-right: 7px;
+}
+#reset-all-btn:hover {
+  background: #dc2626;
+}
+#reset-all-btn:focus {
+  outline: 3px solid rgba(245, 11, 11, 0.4);
+}
+
+.feedback {
+  min-height: 1.5rem;
+}
+.is-paused #timer,
+.is-paused #prompt {
+  opacity: 0.45;
+  filter: saturate(0.7);
+  transition: opacity 0.2s ease;
+}
+
+.paused-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+.paused-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.paused-card {
+  background: #ffffff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeInUP 0.18s ease;
+}
+.paused-pulse {
+  font-size: 1.3rem;
+  font-weight: 700;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+.puased-tip {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+#missed-list .label {
+  font-weight: 600;
+  color: #6b7280;
+  margin-right: 0.25rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.volume {
+  margin-left: 7px;
+}
+
+.clean-ui .controls {
+  display: none;
+}
+
+#clean-ui-hint {
+  opacity: 0.7;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: 1;
+    opacity: 0.95;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,22 @@
+# Ensure consistent line endings
+* text=auto
+
+# Treat these as text files
+*.ts text
+*.js text
+*.html text
+*.css text
+*.json text
+*.md text
+*.yml text
+*.yaml text
+
+# Treat images and binaries as binary (no diff)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+
+# Default to UTF-8 encoding
+* text working-tree-encoding=UTF-8

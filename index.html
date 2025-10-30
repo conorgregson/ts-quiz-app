@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz App (TypeScript)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Quiz App</h1>
+    </main>
+
+    <div id="controls" class="controls">
+      <label><input type="checkbox" id="mute-toggle" />Mute</label>
+      <label class="volume">
+        Volume
+        <input
+          type="range"
+          id="volume-slider"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.6"
+        />
+      </label>
+      <button id="pause-resume-btn" type="button">&#9208; Pause</button>
+      <button id="reset-run-btn" type="button">Restart Quiz</button>
+      <button id="reset-all-btn" type="button">Reset All Progress</button>
+      <label><input type="checkbox" id="clean-ui-toggle" />Clean UI</label>
+      <small id="clean-ui-hint">(Press "C" to toggle)</small>
+    </div>
+
+    <div id="app" class="quiz">
+      <div id="timer"></div>
+      <h2 id="prompt"></h2>
+      <div id="options"></div>
+      <p id="score"></p>
+
+      <div id="feedback" class="feedback"></div>
+    </div>
+
+    <section id="summary" class="summary" hidden>
+      <h2>Summary</h2>
+      <p id="final-line"></p>
+      <p id="bests"></p>
+      <h3>Review missed</h3>
+      <ol id="missed-list"></ol>
+      <button id="summary-restart-btn" type="button">Restart Quiz</button>
+    </section>
+
+    <div id="paused-overlay" class="paused-overlay hidden" aria-hidden="true">
+      <div class="paused-card">
+        <div class="paused-pulse">&#9208; Paused</div>
+        <div class="paused-tip">
+          Timer is stopped. Press Resume to continue.
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./build/js/main.js"></script>
+  </body>
+</html>
