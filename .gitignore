@@ -1,5 +1,5 @@
 # Build output
-/build/js/
+build/js/*.map
 /dist/
 /out/
 /*.log
