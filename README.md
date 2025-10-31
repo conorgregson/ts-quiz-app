@@ -120,7 +120,7 @@ ts-quiz-app/
 ├── README.md                       # Project documentation
 ├── LICENSE.md                      # License documentation
 ├── .gitignore                      # Git ignore rules
-└── .gitattributes                  # Text normalization (optional)
+└── .gitattributes                  # Text normalization
 ```
 
 - **main.ts** – Orchestrates the app and handles DOM updates
