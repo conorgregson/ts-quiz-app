@@ -2,11 +2,33 @@
 
 A mini quiz app built with **TypeScript** to practice generics, discriminated unions, and DOM manipulation.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20App-0ea5e9?logo=githubpages&logoColor=white)](https://conorgregson.github.io/ts-quiz-app)
+![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?logo=typescript)
+![Learning](https://img.shields.io/badge/Practice-Learning%20Project-8b5cf6)
+![Status](https://img.shields.io/badge/Status-Complete-22c55e)
+![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b)
+
+---
+
+### Tech Stack Overview
+
+#### Core
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+#### APIs & Tools
+
+![Web%20Audio%20API](https://img.shields.io/badge/Web%20Audio%20API-9333EA?style=for-the-badge&logo=soundcharts&logoColor=white)
+![LocalStorage](https://img.shields.io/badge/LocalStorage-18181B?style=for-the-badge&logo=googlechrome&logoColor=white)
+![ESModules](https://img.shields.io/badge/ES%20Modules-0F766E?style=for-the-badge&logo=javascript&logoColor=white)
+
 ---
 
 ## Live Demo
 
-**▶ Try it now:** Try it now: https://conorgregson.github.io/ts-quiz-app
+**▶ Try it now:** https://conorgregson.github.io/ts-quiz-app
 
 > Data is saved locally in your browser via `localStorage`
 
@@ -34,6 +56,20 @@ The quiz supports **multiple-choice and true/false questions**, timers per quest
 - **Keyboard shortcuts:**
   - **Space** — Resume quiz when paused
   - **C** — Toggle clean UI (hide toolbar)
+
+---
+
+## Controls
+
+| Action                 | Description                                                |
+| ---------------------- | ---------------------------------------------------------- |
+| **Answer click**       | Selects an option                                          |
+| **Timer ends**         | Counts as missed question with “(no answer)”               |
+| **Pause / Resume**     | Toggles timer and overlay                                  |
+| **Restart Quiz**       | Restarts this run only                                     |
+| **Reset All Progress** | Clears saved best score and streak (confirmation required) |
+| **Space**              | Resume when paused                                         |
+| **C**                  | Toggle clean UI mode                                       |
 
 ---
 
@@ -76,7 +112,7 @@ ts-quiz-app/
 │   ├── quiz-running.png
 │   ├── quiz-paused.png
 │   ├── quiz-summary.png
-│   └── quiz-clean-ui
+│   └── quiz-clean-ui.png
 │
 ├── index.html                      # Main HTML file
 ├── styles.css                      # Project styling (UI + controls)
@@ -97,41 +133,42 @@ ts-quiz-app/
 
 ---
 
-## Screens
+## Screenshots
 
 ### Quiz Running
 
-Displays the current question, options, timer, and score tracker.
+Displays the current question, answer options, countdown timer, and score tracker.
 
-### Paused
+![Quiz Running](./images/quiz-running.png)
+
+### Paused State
 
 Overlay with “⏸ Paused” message, dimmed question area, and resume controls.
 
-### Summary Screen
+![Paused State](./images/quiz-paused.png)
 
-Shows final score, best streaks, and a “Review Missed” list:
+### Review Summary
 
-**Question**: Which keyword defines a constant?
+Shows your final score, best streaks, and a detailed “Review Missed” list with explanations.
 
-**Your answer**: var
+![Review Summary](./images/quiz-summary.png)
 
-**Correct answer**: const
+### Clean UI Mode
 
-**Explanation**: The const keyword prevents reassignment.
+Hides the toolbar for a minimal, distraction-free quiz experience.
+
+![Clean UI Mode](./images/quiz-clean-ui.png)
 
 ---
 
-## Controls
+## Learning Focus
 
-| Action                 | Description                                                |
-| ---------------------- | ---------------------------------------------------------- |
-| **Answer click**       | Selects an option                                          |
-| **Timer ends**         | Counts as missed question with “(no answer)”               |
-| **Pause / Resume**     | Toggles timer and overlay                                  |
-| **Restart Quiz**       | Restarts this run only                                     |
-| **Reset All Progress** | Clears saved best score and streak (confirmation required) |
-| **Space**              | Resume when paused                                         |
-| **C**                  | Toggle clean UI mode                                       |
+This mini-project helped me practice:
+
+- **TypeScript** generics and discriminated unions
+- Work with browser **DOM APIs** using strict types
+- Manage state cleanly via a lean orchestrator (`main.ts`)
+- Add polish through **UX features** like sound, pause overlay, and persistent scoring
 
 ---
 
@@ -155,41 +192,6 @@ tsc --watch
 - Open `index.html` in your browser or launch with Live Server in VS Code.
 
 4. **Play the Quiz!**
-
----
-
-## Screenshots
-
-### Quiz Running
-
-Shows a question, options, timer, and score area.
-![Quiz Running](./images/quiz-running.png)
-
-### Paused State
-
-Shows a question, options, timer, and score area.
-![Paused State](./images/quiz-paused.png)
-
-### Review Summary
-
-Shows a question, options, timer, and score area.
-![Review Summary](./images/quiz-summary.png)
-
-### Clean UI Mode
-
-Shows a question, options, timer, and score area.
-![Clean UI Mode](./images/quiz-clean-ui.png)
-
----
-
-## Learning Focus
-
-This mini-project helped me practice:
-
-- **TypeScript** generics and discriminated unions
-- Work with browser **DOM APIs** using strict types
-- Manage state cleanly via a lean orchestrator (`main.ts`)
-- Add polish through **UX features** like sound, pause overlay, and persistent scoring
 
 ---
 
@@ -223,4 +225,4 @@ Made by Conor Gregson
 
 ## License
 
-This project is open-source and available under the **MIT License**. See the [LICENSE](/LICENSE) file for details.
+This project is open-source and available under the **MIT License**. See the [LICENSE](LICENSE.md) file for details.

@@ -256,21 +256,24 @@ window.addEventListener("keydown", (e) => {
   if (e.key.toLowerCase() === "c" && !e.metaKey && !e.ctrlKey && !e.altKey) {
     e.preventDefault();
     setCleanUI(!document.body.classList.contains("clean-ui"));
+    return;
   }
 
-  if (e.code === "Space" || e.key === "") {
-    if (engine.isPaused()) {
-      e.preventDefault();
-      soundEffect.play("resume");
-      engine.resume(
-        (seconds) => (timerEl.textContent = `${seconds}s`),
-        () => {
-          soundEffect.play("timeout");
-          engine.next();
-          step();
-        }
-      );
-    }
+  const spacePressed =
+    e.code === "Space" || e.key === " " || e.key === "Spacebar";
+
+  if (engine.isPaused() && spacePressed) {
+    e.preventDefault();
+    soundEffect.play("resume");
+    engine.resume(
+      (seconds) => (timerEl.textContent = `${seconds}s`),
+      () => {
+        soundEffect.play("timeout");
+        engine.next();
+        step();
+      }
+    );
+    setPausedUI(false);
   }
 });
 
